@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="button-wrapper">
+      <button
+        style="
+          background: #7dc963;
+          box-shadow: 13px 20px 16px -9px #7dc963, 5px 9px 44px -3px #7dc963;
+        "
+        id="900%"
+        onclick="slider(this.id)"
+      >
+        Joke Generator
+      </button>
+      <button
+        style="
+          background: #c99663;
+          box-shadow: 13px 20px 16px -9px #c99663, 5px 9px 44px -3px #c99663;
+        "
+        id="800%"
+        onclick="slider(this.id)"
+      >
+        Stop Watch
+      </button>
+      <button
+        style="
+          background: #acc963;
+          box-shadow: 13px 20px 16px -9px #acc963, 5px 9px 44px -3px #acc963;
+        "
+        id="0%"
+        onclick="slider(this.id)"
+      >
+        Analog Watch
+      </button>
+      <button
+        style="
+          background: #63bbc9;
+          box-shadow: 13px 20px 16px -9px #63bbc9, 5px 9px 44px -3px #63bbc9;
+        "
+        id="700%"
+        onclick="slider(this.id)"
+      >
+        Loan Calculator
+      </button>
+      <button
+        style="
+          background: #7763c9;
+          box-shadow: 13px 20px 16px -9px #7763c9, 5px 9px 44px -3px #7763c9;
+        "
+        id="100%"
+        onclick="slider(this.id)"
+      >
+        Currency Convertor
+      </button>
+      <button
+        style="
+          background: #c963ae;
+          box-shadow: 13px 20px 16px -9px #c963ae, 5px 9px 44px -3px #c963ae;
+        "
+        id="600%"
+        onclick="slider(this.id)"
+      >
+        BMI Calculator
+      </button>
+      <button
+        style="
+          background: #5b2a2a;
+          box-shadow: 13px 20px 16px -9px #5b2a2a, 5px 9px 44px -3px #5b2a2a;
+        "
+        id="200%"
+        onclick="slider(this.id)"
+      >
+        Temperature Convertor
+      </button>
+      <button
+        style="
+          background: #0d4d77c1;
+          box-shadow: 13px 20px 16px -9px #0d4d77c1, 5px 9px 44px -3px #0d4d77c1;
+        "
+        id="500%"
+        onclick="slider(this.id)"
+      >
+        Random Quote Generator
+      </button>
+      <button
+        style="
+          background: #c33434c0;
+          box-shadow: 13px 20px 16px -9px #c33434c0, 5px 9px 44px -3px #c33434c0;
+        "
+        id="400%"
+        onclick="slider(this.id)"
+      >
+        English Dictionary
+      </button>
+      <button
+        style="
+          background: #506d08b7;
+          box-shadow: 13px 20px 16px -9px #506d08b7, 5px 9px 44px -3px #506d08b7;
+        "
+        id="300%"
+        onclick="slider(this.id)"
+      >
+        Weight Convertor
+      </button>
+    </div>
+    <div class="container">
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #acc963">
+            <div class="clock">
+              <div class="numbers">
+                <span style="--i: 0"><p>12</p></span>
+                <span style="--i: 1"><p>3</p></span>
+                <span style="--i: 2"><p>6</p></span>
+                <span style="--i: 3"><p>9</p></span>
+                <div class="circle" id="hr"><i></i></div>
+                <div class="circle" id="min"><i></i></div>
+                <div class="circle" id="sec"><i></i></div>
+              </div>
+            </div>
+            <!-- Digital Clock -->
+            <div id="time">
+              <div id="hour" style="--clr: #e99f1e">00</div>
+              <div id="minutes" style="--clr: #1e9be9">00</div>
+              <div id="seconds" style="--clr: #e91e63">00</div>
+              <div id="ampm">AM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #7763c9">2</div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #5b2a2a">3</div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #506d08b7">4</div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #c33434c0">5</div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #0d4d77c1">6</div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #c963ae">7</div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #63bbc9">8</div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #c99663">9</div>
+        </div>
+      </div>
+      <div class="main-item">
+        <div class="items">
+          <div class="item" style="background: #7dc963">10</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

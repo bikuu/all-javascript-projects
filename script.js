@@ -82,9 +82,10 @@ function startTimer() {
       getTens.innerHTML = tens;
       getSeconds.innerHTML = stopWatchsec;
     }
-    if (stopWatchsec > 59) {
+    if (stopWatchsec >= 60) {
       stopWatchsec = "00";
-      getMinute.innerHTML = stopWatchsec;
+      stopWatchsec = stopWatchsec < 10 ? "0" + stopWatchsec : stopWatchsec;
+      getSeconds.innerHTML = stopWatchsec;
       stopWatchmin++;
       stopWatchmin = stopWatchmin < 10 ? "0" + stopWatchmin : stopWatchmin;
       getMinute.innerHTML = stopWatchmin;

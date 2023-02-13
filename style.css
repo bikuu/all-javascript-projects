@@ -321,3 +321,44 @@ body {
     inset -5px -5px 15px rgba(213, 145, 145, 0.75);
   font-size: 0.5em;
 }
+
+/* JOke Generator */
+
+.joke-container {
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  background: linear-gradient(to left bottom, lightpink, lightblue, lightpink);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  padding: 20px;
+  animation: bounce 3s infinite;
+  border-radius: 20px;
+}
+.joke-container .heading {
+  font-size: 1.5em;
+  font-weight: 200;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+.joke-container .joke {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin: 40px;
+}
+.joke-container .btn-joke {
+  font-size: 1.1em;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  text-transform: capitalize;
+}
+.joke-container .btn-joke:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}

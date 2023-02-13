@@ -105,3 +105,20 @@ function resetTimer() {
   stopWatchmin = "00";
   getMinute.innerHTML = stopWatchmin;
 }
+
+// JOke Generator
+
+const apiKey = "iJkXXdzbd1VVLt6bTjgZPg==J6iRlZAIYW6eDM9r";
+const apiUrl = "https://api.api-ninjas.com/v1/dadjokes?limit=1";
+const options = {
+  method: "GET",
+  headers: {
+    "X-Api-Key": apiKey,
+  },
+};
+
+async function jokeGenerator() {
+  const response = await fetch(apiUrl, options);
+  const data = await response.json();
+  document.querySelector(".joke").innerHTML = data[0].joke;
+}

@@ -122,3 +122,18 @@ async function jokeGenerator() {
   const data = await response.json();
   document.querySelector(".joke").innerHTML = data[0].joke;
 }
+
+// Loan Calculator
+
+function calculateLoan() {
+  loanAmount = document.querySelector("#loan-amount").value;
+  interestRate = document.querySelector("#interest-rate").value;
+  monthsToPay = document.querySelector("#time-pay").value;
+
+  interest = (loanAmount * (interestRate / 100)) / monthsToPay;
+  monthlyPayment = (loanAmount / monthsToPay + interest).toFixed(2);
+
+  document.querySelector(
+    ".payment"
+  ).innerHTML = `Monthly Payment : ${monthlyPayment}`;
+}

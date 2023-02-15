@@ -145,7 +145,36 @@
       </div>
       <div class="main-item">
         <div class="items">
-          <div class="item" style="background: #7763c9">2</div>
+          <div class="item" style="background: #7763c9">
+            <div class="currency-convertor-wrapper">
+              <h1>Currency Convevertor</h1>
+              <div class="currency-container">
+                <select name="" id="currency-first">
+                  <option value="NPR">NPR</option>
+                  <option value="AUD" selected>AUD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="CAD">CAD</option>
+                  <option value="INR">INR</option>
+                  <option value="JPY">JPY</option>
+                  <option value="USD">USD</option>
+                </select>
+                <input type="number" id="curr-amt" value="1" min="1" />
+              </div>
+              <div class="currency-container">
+                <select name="" id="currency-second">
+                  <option value="NPR" selected>NPR</option>
+                  <option value="AUD">AUD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="CAD">CAD</option>
+                  <option value="INR">INR</option>
+                  <option value="JPY">JPY</option>
+                  <option value="USD">USD</option>
+                </select>
+                <input type="number" id="converted-value" disabled />
+              </div>
+              <p class="exchange-rate">1 USD = 136 NPR</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="main-item">

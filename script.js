@@ -137,3 +137,38 @@ function calculateLoan() {
     ".payment"
   ).innerHTML = `Monthly Payment : ${monthlyPayment}`;
 }
+
+// Currency Convertor
+
+const getFirstCurrEL = document.querySelector("#currency-first");
+const getCurrValue = document.querySelector("#curr-amt");
+const getSecCurrEL = document.querySelector("#currency-second");
+const getConvertedValue = document.querySelector("#converted-value");
+
+const exchangeRate = document.querySelector(".exchange-rate");
+
+const apiCurrUrl = "https://api.api-ninjas.com/v1/exchangerate?pair=";
+const currOptions = {
+  method: "GET",
+  headers: {
+    "X-Api-Key": apiKey,
+  },
+};
+upadteRate();
+async function upadteRate() {
+  const response = await fetch(
+    `${apiCurrUrl}${getFirstCurrEL.value}_${getSecCurrEL.value}`,
+    currOptions
+  );
+  const data = await response.json();
+  exchangeRate.innerHTML = `1 ${
+    getFirstCurrEL.value
+  } = ${data.exchange_rate.toFixed(3)} ${getSecCurrEL.value}`;
+  getConvertedValue.value = (getCurrValue.value * data.exchange_rate).toFixed(
+    3
+  );
+}
+
+getFirstCurrEL.addEventListener("change", upadteRate);
+getSecCurrEL.addEventListener("change", upadteRate);
+getCurrValue.addEventListener("change", upadteRate);

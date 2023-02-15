@@ -396,3 +396,40 @@ body {
   font-size: 20px;
   margin-top: 5px;
 }
+
+/* Currency Convertor */
+
+.currency-convertor-wrapper {
+  margin: auto;
+  margin-top: 100px;
+  width: max-content;
+  background: #221654;
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.currency-convertor-wrapper .currency-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.currency-container select {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+.currency-container input {
+  border: none;
+  background: transparent;
+  font-size: 1.5em;
+  text-align: right;
+  color: aliceblue;
+  outline: none;
+}
+
+.currency-convertor-wrapper .exchange-rate {
+  font-size: 16px;
+  font-weight: 600;
+}

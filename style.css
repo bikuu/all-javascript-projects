@@ -433,3 +433,44 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
+
+/* BMI Calculator */
+
+.bmi-container {
+  margin: auto;
+  background: #c585b4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  width: fit-content;
+}
+
+.bmi-container .heading {
+  font-size: 30px;
+}
+
+.bmi-container input {
+  padding: 5px 20px;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+.bmi-container button {
+  background: #c963ae;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.bmi-container .info-text {
+  font-size: 20px;
+  font-weight: 500;
+}

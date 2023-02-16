@@ -172,3 +172,24 @@ async function upadteRate() {
 getFirstCurrEL.addEventListener("change", upadteRate);
 getSecCurrEL.addEventListener("change", upadteRate);
 getCurrValue.addEventListener("change", upadteRate);
+
+// BMI Calculator
+
+const btn = document.querySelector("#btn");
+
+function calculateBMI() {
+  const heightValue = document.querySelector("#height").value / 100;
+  const weightValue = document.querySelector("#weight").value;
+  const bmiValue = (weightValue / heightValue ** 2).toFixed(2);
+  document.querySelector("#bmi-result").value = bmiValue;
+  if (bmiValue < 18.5) {
+    document.querySelector("#weight-condition").innerText = "Under Weight";
+  } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
+    document.querySelector("#weight-condition").innerText = "Normal Weight";
+  } else if (bmiValue >= 25 && bmiValue <= 29.9) {
+    document.querySelector("#weight-condition").innerText = "Over Weight";
+  } else if (bmiValue > 30) {
+    document.querySelector("#weight-condition").innerText = "Obesity";
+  }
+}
+btn.addEventListener("click", calculateBMI);

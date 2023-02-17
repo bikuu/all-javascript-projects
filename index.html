@@ -13,6 +13,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -229,7 +236,18 @@
       </div>
       <div class="main-item">
         <div class="items">
-          <div class="item" style="background: #0d4d77c1">6</div>
+          <div class="item" style="background: #0d4d77c1">
+            <div class="quote-container">
+              <h1 class="heading">Random Quote Generator</h1>
+              <h2 class="quote">
+                <i class="fa-solid fa-quote-left"></i>
+                <span id="quote">Quote</span>
+                <i class="fa-solid fa-quote-right"></i>
+              </h2>
+              <p class="author">~ Author</p>
+              <button onclick="generateQuote()">Get a quote</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="main-item">

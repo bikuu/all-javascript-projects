@@ -222,3 +222,30 @@ function convertTemp(event) {
       break;
   }
 }
+
+// Quote Generator
+
+const btnQuote = document.querySelector(".quote-container button");
+const apiQuote = "https://api.quotable.io/random";
+
+async function generateQuote() {
+  try {
+    btnQuote.innerText = "Loading...";
+    btnQuote.disabled = true;
+    document.querySelector("#quote").innerText = "Quote Generating...";
+    document.querySelector(".author").innerText = "";
+
+    const response = await fetch(apiQuote);
+    const data = await response.json();
+    document.querySelector("#quote").innerText = data.content;
+    document.querySelector(".author").innerText = `~ ${data.author}`;
+    btnQuote.innerText = "Generate New Quote";
+    btnQuote.disabled = false;
+  } catch (error) {
+    document.querySelector("#quote").innerText =
+      "An error happened, Please try again...";
+    document.querySelector(".author").innerText = "";
+    btnQuote.innerText = "Get a quote";
+    btnQuote.disabled = false;
+  }
+}

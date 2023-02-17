@@ -505,3 +505,46 @@ body {
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(0, 0, 0, 0.5);
 }
+
+/* Quote Generator */
+
+.quote-container {
+  margin: auto;
+  background: #0d4d7758;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.quote-container .heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.quote-container .quote {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.quote-container .author {
+  font-size: 25px;
+  margin: 10px;
+  color: #ccc;
+  font-style: italic;
+}
+.quote-container button {
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: #0d4d7758;
+  box-shadow: 0 5px 5px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+.quote-container button:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.5);
+}

@@ -588,3 +588,40 @@ body {
 .dictionary-container .meaning-container p {
   margin-bottom: 10px;
 }
+
+/* Weight Convertor */
+
+.weight-convertor-container {
+  margin: auto;
+  margin-top: 100px;
+  width: max-content;
+  background: rgba(145, 180, 59, 0.2);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #713fd5f8;
+}
+
+.weight-convertor-container .input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+.input-container #input {
+  background: rgba(255, 255, 255, 0.3);
+  border: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  width: 60%;
+  font-size: 15px;
+  margin: 10px 0;
+  outline: none;
+}
+
+.weight-convertor-container .error {
+  color: rgb(238, 66, 66);
+  margin-top: 5px;
+  display: none;
+}

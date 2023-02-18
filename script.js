@@ -286,3 +286,32 @@ inputValue.addEventListener("keyup", (e) => {
     fetchAPI(e.target.value);
   }
 });
+
+// Weight Convertor
+
+const inputWeight = document.querySelector(
+  ".weight-convertor-container #input"
+);
+const resultWeight = document.querySelector(
+  ".weight-convertor-container #result"
+);
+
+const errorEL = document.querySelector(".error");
+
+let errorTime;
+function updateResult() {
+  if (inputWeight.value <= 0 || isNaN(inputWeight.value)) {
+    errorEL.style.display = "block";
+    errorEL.innerText = "Please Enter A Valid Number";
+    if (inputWeight.value.length == "" || isNaN(inputWeight.value)) {
+      errorEL.innerText = "Please Enter Your Weight";
+    }
+    clearTimeout(errorTime);
+    errorTime = setTimeout(() => {
+      errorEL.innerText = "";
+      inputWeight.value = "";
+    }, 2000);
+  } else {
+    resultWeight.innerText = (+inputWeight.value / 2.2).toFixed(2);
+  }
+}

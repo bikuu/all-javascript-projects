@@ -226,7 +226,23 @@
       </div>
       <div class="main-item">
         <div class="items">
-          <div class="item" style="background: #506d08b7">4</div>
+          <div class="item" style="background: #506d08b7">
+            <div class="weight-convertor-container">
+              <h1>Weight Convertor</h1>
+              <div class="input-container">
+                <label for="poundsd">Pounds: </label>
+                <input
+                  type="number"
+                  id="input"
+                  placeholder="Enter Your Weight"
+                  step=".1"
+                  oninput="updateResult()"
+                />
+              </div>
+              <p>Your Weight in Kg is: <span id="result">250</span></p>
+              <p class="error">Error</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="main-item">

@@ -14,23 +14,25 @@ body {
   flex-direction: column;
   background: #f2f2f2;
   position: relative;
+  overflow: hidden;
 }
 
 .button-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 .button-wrapper button {
   border: none;
   outline: none;
-  margin: 0 5px;
   padding: 10px;
+  margin: 0 2px;
   border-radius: 20px;
   transition: all 0.5s ease;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
 }
 .button-wrapper button:focus {
@@ -57,8 +59,6 @@ body {
   width: 100%;
   padding: 10px 0;
   transition: all 1s ease;
-
-  /* overflow: hidden; */
 }
 .container .main-item {
   width: 100%;

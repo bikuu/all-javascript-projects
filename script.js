@@ -249,3 +249,40 @@ async function generateQuote() {
     btnQuote.disabled = false;
   }
 }
+generateQuote();
+
+// English Dictionary
+
+const inputValue = document.querySelector(".dictionary-container #input");
+const infoText = document.querySelector(".info-text");
+const meaningContainer = document.querySelector(".meaning-container");
+async function fetchAPI(word) {
+  try {
+    infoText.style.display = "block";
+    meaningContainer.style.display = "none";
+
+    infoText.innerText = `Searching the meaning of ${word}`;
+    const response = await fetch(
+      `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+    );
+    const data = await response.json();
+    if (response.status === 404) {
+      infoText.innerText = data.message;
+    } else {
+      meaningContainer.style.display = "block";
+      document.querySelector(".title").innerText = data[0].word;
+      document.querySelector(".meaning").innerText =
+        data[0].meanings[0].definitions[0].definition;
+      document.querySelector("#audio").src = data[0].phonetics[0].audio;
+      infoText.style.display = "none";
+    }
+  } catch (error) {
+    infoText.innerText = `${error.message}`;
+  }
+}
+
+inputValue.addEventListener("keyup", (e) => {
+  if (e.target.value && e.key === "Enter") {
+    fetchAPI(e.target.value);
+  }
+});

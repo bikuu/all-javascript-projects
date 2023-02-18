@@ -298,7 +298,7 @@ const resultWeight = document.querySelector(
 
 const errorEL = document.querySelector(".error");
 
-let errorTime;
+let clearTime;
 function updateResult() {
   if (inputWeight.value <= 0 || isNaN(inputWeight.value)) {
     errorEL.style.display = "block";
@@ -306,12 +306,17 @@ function updateResult() {
     if (inputWeight.value.length == "" || isNaN(inputWeight.value)) {
       errorEL.innerText = "Please Enter Your Weight";
     }
-    clearTimeout(errorTime);
+    clearTimeout(clearTime);
     errorTime = setTimeout(() => {
       errorEL.innerText = "";
       inputWeight.value = "";
     }, 2000);
   } else {
-    resultWeight.innerText = (+inputWeight.value / 2.2).toFixed(2);
+    resultWeight.innerText = `${(+inputWeight.value / 2.2).toFixed(2)} kg`;
+    clearTimeout(clearTime);
+    clearTime = setTimeout(() => {
+      inputWeight.value = "";
+      resultWeight.innerText = "Here";
+    }, 2000);
   }
 }
